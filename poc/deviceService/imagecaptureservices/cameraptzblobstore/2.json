@@ -1,0 +1,9 @@
+[
+  {
+    "camera_id": 2,
+    "ptz_positions": [
+      { "pan": 10, "tilt": 20, "zoom": 5 },
+      { "pan": 15, "tilt": 25, "zoom": 10 }
+    ]
+  }
+]
