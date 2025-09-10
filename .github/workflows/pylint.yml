@@ -15,7 +15,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
-        run: 
+        run:
           pip install opencv-python numpy scikit-image matplotlib pillow tqdm retinaface deepface reportlab schedule requests hikvisionapi
       - name: Run Pylint
         run: pylint poc/
