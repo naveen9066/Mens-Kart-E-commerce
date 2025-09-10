@@ -15,9 +15,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pylint
-    - name: Analysing the code with pylint
-      run: |
-        pylint $(git ls-files '*.py')
+        run: |
+          pip install opencv-python numpy scikit-image matplotlib pillow tqdm retinaface deepface reportlab schedule requests hikvisionapi
+      - name: Run Pylint
+        run: pylint poc/
