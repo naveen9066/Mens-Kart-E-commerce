@@ -66,7 +66,7 @@ camera.count=1
 camera.1.id=1
 camera.1.ip=192.168.1.64
 camera.1.username=admin
-camera.1.password=DWPADMIN123
+camera.1.password=your_cam_ip
 camera.1.ptz_supported=true
 camera.1.image_store_path=C:\Users\Director\Projects\housepulse-main\poc\detectcount\sampleimages
 ```
