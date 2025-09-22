@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MensKart</string>
+    <string name="title_activity_main">MensKart</string>
+    <string name="package_name">com.MensKart.app</string>
+    <string name="custom_url_scheme">com.MensKart.app</string>
+</resources>

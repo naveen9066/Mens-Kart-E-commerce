@@ -1,0 +1,40 @@
+{
+  "name": "mens-kart-cordova",
+  "version": "1.0.0",
+  "description": "Mens Kart - Cordova/PhoneGap APK Build Configuration",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm install -g cordova && cordova create mens-kart-cordova com.menskart.app 'Mens Kart'",
+    "prepare": "cp -r frontend/* mens-kart-cordova/www/ && cp config.xml mens-kart-cordova/",
+    "add-platform": "cd mens-kart-cordova && cordova platform add android",
+    "add-plugins": "cd mens-kart-cordova && cordova plugin add cordova-plugin-whitelist cordova-plugin-splashscreen cordova-plugin-statusbar cordova-plugin-network-information",
+    "build": "cd mens-kart-cordova && cordova build android",
+    "build-release": "cd mens-kart-cordova && cordova build android --release",
+    "run": "cd mens-kart-cordova && cordova run android",
+    "clean": "cd mens-kart-cordova && cordova clean"
+  },
+  "keywords": [
+    "ecommerce",
+    "mens-fashion",
+    "cordova",
+    "phonegap",
+    "android",
+    "apk"
+  ],
+  "author": "Mens Kart Team",
+  "license": "MIT",
+  "devDependencies": {
+    "cordova": "^12.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-network-information": {}
+    }
+  }
+}

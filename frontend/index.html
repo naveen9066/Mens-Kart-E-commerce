@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mens Kart - Men's Fashion & Lifestyle</title>
+
+  <!-- PWA Meta Tags -->
+  <meta name="theme-color" content="#ff3f6c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Mens Kart">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileColor" content="#ff3f6c">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Favicon and Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/icon-192x192.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo">
+          <h1>Mens Kart</h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search for products, brands and more..." id="search-input">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+          <a href="profile.html" class="user-link"><i class="fas fa-user"></i> Profile</a>
+          <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+          <a href="login.html" class="login-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="product-list.html?category=Shirts">Shirts</a></li>
+          <li><a href="product-list.html?category=Pants">Pants</a></li>
+          <li><a href="product-list.html?category=Jackets">Jackets</a></li>
+          <li><a href="product-list.html?category=Shoes">Shoes</a></li>
+          <li><a href="product-list.html?category=Accessories">Accessories</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Discover Your Style</h2>
+          <p>Premium men's fashion at unbeatable prices</p>
+          <a href="product-list.html" class="cta-button">Shop Now</a>
+        </div>
+        <div class="hero-image">
+          <img src="/images/Main-Image.jpeg" alt="Men's Fashion" onerror="this.src='https://via.placeholder.com/600x400/667eea/ffffff?text=Mens+Fashion'">
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="container">
+        <h2>Shop by Category</h2>
+        <div class="category-grid" id="category-list">
+          <!-- Categories will be populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <div class="container">
+        <h2>Featured Products</h2>
+        <div class="product-grid" id="product-list">
+          <!-- Products will be populated by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mens Kart</h3>
+          <p>Your ultimate destination for men's fashion</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="product-list.html">Products</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>support@menskart.com</p>
+          <p>+1 234 567 890</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

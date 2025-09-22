@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mens Kart - Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo">
+          <h1>Mens Kart</h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search for products, brands and more..." id="search-input">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+          <a href="profile.html" class="user-link"><i class="fas fa-user"></i> Profile</a>
+          <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+          <a href="login.html" class="login-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="product-list.html?category=Shirts">Shirts</a></li>
+          <li><a href="product-list.html?category=Pants">Pants</a></li>
+          <li><a href="product-list.html?category=Jackets">Jackets</a></li>
+          <li><a href="product-list.html?category=Shoes">Shoes</a></li>
+          <li><a href="product-list.html?category=Accessories">Accessories</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="profile-container container">
+      <div class="profile-header">
+        <h2>My Profile</h2>
+        <p>Manage your account information</p>
+      </div>
+
+      <div class="profile-content">
+        <div class="profile-sidebar">
+          <div class="profile-avatar">
+            <img id="profile-image" src="https://via.placeholder.com/150x150/667eea/ffffff?text=Profile" alt="Profile Picture">
+            <div class="avatar-upload">
+              <label for="avatar-input" class="upload-btn">
+                <i class="fas fa-camera"></i>
+                <span>Change Photo</span>
+              </label>
+              <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+            </div>
+          </div>
+          <div class="profile-stats">
+            <div class="stat-item">
+              <span class="stat-number" id="total-orders">0</span>
+              <span class="stat-label">Orders</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" id="total-spent">$0</span>
+              <span class="stat-label">Spent</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" id="member-since">2024</span>
+              <span class="stat-label">Member Since</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-main">
+          <div class="profile-section">
+            <div class="section-header">
+              <h3>Personal Information</h3>
+              <button class="btn-edit" id="edit-profile-btn">
+                <i class="fas fa-edit"></i> Edit Profile
+              </button>
+            </div>
+
+            <div class="profile-info" id="profile-info">
+              <div class="info-group">
+                <label>Full Name</label>
+                <p id="display-name">Loading...</p>
+              </div>
+              <div class="info-group">
+                <label>Email Address</label>
+                <p id="display-email">Loading...</p>
+              </div>
+              <div class="info-group">
+                <label>Phone Number</label>
+                <p id="display-phone">Not provided</p>
+              </div>
+              <div class="info-group">
+                <label>User ID</label>
+                <p id="display-userid">Loading...</p>
+              </div>
+            </div>
+
+            <form class="profile-form" id="update-profile-form" style="display: none;">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                  <label for="userid">User ID</label>
+                  <input type="text" id="userid" readonly>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button type="button" class="btn-secondary" id="cancel-edit-btn">Cancel</button>
+                <button type="submit" class="btn-primary">Save Changes</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="profile-section">
+            <h3>Account Security</h3>
+            <div class="security-options">
+              <button class="btn-outline" onclick="changePassword()">
+                <i class="fas fa-lock"></i> Change Password
+              </button>
+              <button class="btn-outline" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </button>
+            </div>
+          </div>
+
+          <div class="profile-section">
+            <h3>Recent Orders</h3>
+            <div class="recent-orders" id="recent-orders">
+              <p>No recent orders</p>
+            </div>
+            <a href="orders.html" class="view-all-link">View All Orders <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mens Kart</h3>
+          <p>Your ultimate destination for men's fashion</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="product-list.html">Products</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>support@menskart.com</p>
+          <p>+1 234 567 890</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

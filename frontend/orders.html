@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mens Kart - Orders</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo">
+          <h1>Mens Kart</h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search for products, brands and more..." id="search-input">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+          <a href="profile.html" class="user-link"><i class="fas fa-user"></i> Profile</a>
+          <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+          <a href="login.html" class="login-link"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="product-list.html?category=Shirts">Shirts</a></li>
+          <li><a href="product-list.html?category=Pants">Pants</a></li>
+          <li><a href="product-list.html?category=Jackets">Jackets</a></li>
+          <li><a href="product-list.html?category=Shoes">Shoes</a></li>
+          <li><a href="product-list.html?category=Accessories">Accessories</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Order Confirmation Modal -->
+    <div class="order-confirmation-overlay" id="order-confirmation">
+      <div class="order-confirmation-modal">
+        <div class="confirmation-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Order Placed Successfully!</h2>
+        <p>Thank you for shopping with Mens Kart. Your order has been confirmed and will be delivered soon.</p>
+        <div class="order-details">
+          <div class="order-info">
+            <span>Order ID:</span>
+            <strong id="confirmation-order-id">#MK0001</strong>
+          </div>
+          <div class="order-info">
+            <span>Estimated Delivery:</span>
+            <strong>3-5 Business Days</strong>
+          </div>
+        </div>
+        <div class="confirmation-actions">
+          <button class="btn-secondary" onclick="continueShopping()">Continue Shopping</button>
+          <button class="btn-primary" onclick="viewOrders()">View Order Details</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orders List -->
+    <div class="orders-container container">
+      <div class="orders-header">
+        <h2>My Orders</h2>
+        <p>Track and manage your orders</p>
+      </div>
+
+      <div class="orders-content">
+        <div id="orders-list">
+          <!-- Orders will be populated by JS -->
+        </div>
+
+        <div class="empty-orders" id="empty-orders">
+          <div class="empty-icon">
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+          <h3>No orders yet</h3>
+          <p>You haven't placed any orders yet. Start shopping to see your orders here.</p>
+          <a href="product-list.html" class="btn-primary">Start Shopping</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mens Kart</h3>
+          <p>Your ultimate destination for men's fashion</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="product-list.html">Products</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>support@menskart.com</p>
+          <p>+1 234 567 890</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
