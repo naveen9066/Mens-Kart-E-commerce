@@ -126,7 +126,7 @@ mens-kart/
    ```
 
 5. **Access the Application**
-   - Open [http://localhost:5000](http://localhost:5000) in your browser
+   - Open [http://localhost:54112](http://localhost:54112 in your browser
    - Register a new account or login with admin credentials
 
 
